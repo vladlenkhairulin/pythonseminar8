@@ -1,5 +1,5 @@
 from work_with_file import *
-def search_contact():
+def search_contact(ff):
     print(
         'Варианты поиска:\n'\
         '1 - по фамилии\n'\
@@ -17,11 +17,10 @@ def search_contact():
 
     find = input('Введите данные для поиска: ').title()
     print()
-    contacts = read_file()
-    contacts_list = contacts.strip().split('\n\n')
+    contacts = read_file(ff)
+    contacts_list = contacts.strip().split('\n')
     for contact_str in contacts_list:
-        contact_lst = contact_str.replace('\n', ' ').split()        
-        # print(contact_lst)
+        contact_lst = contact_str.split()        
         if find in contact_lst[i_var]:
             print(contact_str)
     print()

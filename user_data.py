@@ -13,6 +13,6 @@ def input_phone():
 def input_address():
     return input('Введите адрес (город): ').title()
 
-def read_file():
-    with open('phonebook.txt', 'r', encoding='utf-8') as f:
+def read_file(file):
+    with open(file, 'r', encoding='utf-8') as f:
         return f.read()
